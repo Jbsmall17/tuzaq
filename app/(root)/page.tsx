@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useMyContext } from "@/context";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [isPaswordVisible, setIsPasswordVisible] = useState(false);
   const {firstRender, setFirstRender} = useMyContext()
 
@@ -16,7 +18,7 @@ export default function Home() {
       setTimeout(()=>{
         setFirstRender(true);
       },1000)
-    }, [firstRender]);
+    }, [firstRender,setFirstRender]);
 
   return (
     <main className="relative">
@@ -73,9 +75,9 @@ export default function Home() {
             </Link>
           </div>
           <Button
-            style={{ boxShadow: "4px 4px black" }}
             variant={"secondary"}
-            className="w-full"
+            className="w-full box-shadow"
+            onClick={() => router.push("/dashboard")}
           >
             Continue
             <ArrowRight className="inline" />
@@ -85,8 +87,7 @@ export default function Home() {
           </p>
           <Link href="/sign-up">
             <Button
-              style={{ boxShadow: "4px 4px black" }}
-              className="w-2/4 block mx-auto cursor-pointer"
+              className="box-shadow w-2/4 block mx-auto cursor-pointer"
               variant={"outline"}
             >
               Sign Up

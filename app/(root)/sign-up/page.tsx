@@ -91,13 +91,13 @@ export default function Page() {
             />
           </div>
         </div>
-        <Button onClick={()=>setStep(2)} style={{boxShadow: "4px 4px black"}} variant={'secondary'} className="w-full cursor-pointer">
+        <Button onClick={()=>setStep(2)} variant={'secondary'} className="box-shadow w-full cursor-pointer">
             Continue
             <ArrowRight className="inline" />
         </Button>
         <p className="mt-3 md:mt-5 mb-3 text-center">Don&apos;t have an account?</p>
         <Link href="/">
-            <Button style={{boxShadow: "4px 4px black"}} className="w-2/4 block mx-auto cursor-pointer" variant={'outline'}>Log In</Button>
+            <Button className="box-shadow w-2/4 block mx-auto cursor-pointer" variant={'outline'}>Log In</Button>
         </Link>
       </div>
     )
@@ -160,7 +160,7 @@ export default function Page() {
                 : 
                 <div className="flex flex-row justify-center items-center mt-3 md:mt-5 gap-3">
                     <span>Didn&apos;t get mail?</span>
-                    <Button onClick={handleReset} style={{boxShadow: "4px 4px black"}} variant={"outline"} className="cursor-pointer w-[150px]">Resend</Button>
+                    <Button onClick={handleReset} className="box-shadow cursor-pointer w-[150px]" variant={"outline"}>Resend</Button>
                 </div>
             }
           </div>
@@ -188,7 +188,7 @@ export default function Page() {
                 <Role role="Manager" />
                 <Role role="Fuel attendent" />
               </div>
-              <Button onClick={()=>setStep(4)} style={{boxShadow: "4px 4px black"}} variant={'secondary'} className="w-full md:w-1/2 cursor-pointer mx-auto block">
+              <Button onClick={()=>setStep(4)} variant={'secondary'} className="box-shadow w-full md:w-1/2 cursor-pointer mx-auto block">
                 Continue
                 <ArrowRight className="inline" />
               </Button>
@@ -208,7 +208,7 @@ export default function Page() {
             <Label htmlFor="lname">Last Name</Label>
             <Input id="lname" className="p-2" placeholder="Enter your last name" />
           </div>
-          <Button onClick={()=>setStep(5)} style={{boxShadow: "4px 4px black"}} variant={'secondary'} className="w-full cursor-pointer">
+          <Button onClick={()=>setStep(5)} className="box-shadow w-full cursor-pointer" variant={'secondary'}>
             Continue
             <ArrowRight className="inline" />
           </Button>
@@ -242,7 +242,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xl font-medium text-primary">Request accepted</p>
           <p className="text-center text-sm">Your request is successful, you can now log in</p>
-          <Button onClick={()=> setStep(1)} style={{boxShadow: "4px 4px black"}} variant={'secondary'} className="w-full cursor-pointer">
+          <Button onClick={()=> setStep(1)} variant={'secondary'} className="box-shadow w-full cursor-pointer">
             Continue
             <ArrowRight className="inline" />
           </Button>

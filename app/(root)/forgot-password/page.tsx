@@ -29,9 +29,8 @@ export default function Page() {
           />
           <Button
             onClick={() => setStep(2)}
-            style={{ boxShadow: "4px 4px black" }}
             variant={"secondary"}
-            className="w-full cursor-pointer"
+            className="w-full cursor-pointer box-shadow"
           >
             Continue
             <ArrowRight className="inline" />
@@ -90,9 +89,8 @@ export default function Page() {
         </p>
         <Button
           onClick={() => setStep(3)}
-          style={{ boxShadow: "4px 4px black" }}
           variant={"secondary"}
-          className="w-full cursor-pointer"
+          className="w-full cursor-pointer box-shadow"
         >
           Go to mail app
           <ArrowRight className="inline" />
@@ -105,9 +103,8 @@ export default function Page() {
           <div className="flex flex-row justify-center items-center mt-2 md:mt-4  gap-3">
             <span>Didn&apos;t get mail?</span>
             <Button
-              style={{ boxShadow: "4px 4px black" }}
               variant={"outline"}
-              className="cursor-pointer w-[150px]"
+              className="cursor-pointer w-[150px] box-shadow"
             >
               Resend
             </Button>
@@ -188,9 +185,8 @@ export default function Page() {
         </div>
         <Button
           onClick={() => setStep(4)}
-          style={{ boxShadow: "4px 4px black" }}
           variant={"secondary"}
-          className="w-full cursor-pointer"
+          className="w-full cursor-pointer box-shadow"
         >
           Continue
           <ArrowRight className="inline" />
@@ -213,9 +209,8 @@ export default function Page() {
 
         <Button
           onClick={() => setStep(4)}
-          style={{ boxShadow: "4px 4px black" }}
           variant={"secondary"}
-          className="w-full cursor-pointer"
+          className="w-full cursor-pointer box-shadow"
           asChild
         >
           <Link href="/">
