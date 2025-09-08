@@ -26,7 +26,6 @@ import {
   ChevronRight,
   Minus,
   Plus,
-  PlusCircle,
   TrendingDown,
   TrendingUp,
 } from "lucide-react";
@@ -34,7 +33,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function Page() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(7);
   const tankData = [
     {
       id: 1,
@@ -725,13 +724,16 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="space-y-4 w-full sm:w-[250px] xl:w-[300px]">
+          <div className="space-y-4 w-full sm:w-[250px] lg:w-[275px] xl:w-[300px]">
             <p className="text-base sm:text-xl font-medium">
               Overall Performance
             </p>
             <div className="p-3 rounded-md bg-white">
-              <div className="mb-4 md:mb-6 flex flex-row justify-between items-center">
-                <p>Vs last month</p>
+              <div className="mb-4 md:mb-6 flex flex-row justify-between items-center gap-5">
+                <Input 
+                  type="date"
+                />
+                <p className="whitespace-nowrap">Vs last month</p>
               </div>
               <div className="space-y-4 mb-4">
                 <div className="flex flex-row justify-between items-center">
