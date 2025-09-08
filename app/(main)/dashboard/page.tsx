@@ -33,7 +33,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function Page() {
-  const [step, setStep] = useState(7);
+  const [step, setStep] = useState(1);
   const tankData = [
     {
       id: 1,
