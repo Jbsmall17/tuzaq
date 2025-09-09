@@ -1,4 +1,5 @@
 import { Files, Fuel, LayoutDashboard, LogOut, ReceiptText, Settings, Truck, Users } from 'lucide-react'
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 
@@ -19,14 +20,18 @@ export default function Sidebar({isSidebarMenuOpen,setIsSidebarMenuOpen}: sideba
       <h1 className='block md:hidden text-center text-primary text-xl font-semibold'> Tuzaq</h1>
     <div className='flex flex-col justify-between flex-1 w-[150px] lg:w-[175px] xl:w-[200px]'>
       <ul className='w-full text-[#787878]'>
+        <Link href="/dashboard">
         <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/dashboard' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
           <LayoutDashboard className='size-5' />
           <span>Dashboard</span>
         </li>
+        </Link>
+        <Link href="/sales">
         <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/sales' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
           <ReceiptText className='size-5' />
           <span>Sales</span>
         </li>
+        </Link>
         <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/offloads' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
           <Truck className='size-5' />
           <span>Offloads</span>
