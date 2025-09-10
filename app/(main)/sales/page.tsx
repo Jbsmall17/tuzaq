@@ -22,7 +22,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 export default function Page() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
   const mainRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {
@@ -401,12 +401,12 @@ export default function Page() {
               </Button>
               <p className="title">Sales Summary</p>
             </div>
-            <Button variant={"outline"} className="box-shadow">
+            <Button variant={"outline"} className="hidden sm:flex box-shadow">
               <Download className="inline" />
               Download
             </Button>
           </div>
-          <div>
+          <div  className="flex flex-row justify-between">
             <div className="mb-3 md:mb-5 flex flex-row items-center gap-2"> 
               <Image
                 src={"/calendar.svg"}
@@ -417,6 +417,7 @@ export default function Page() {
               <span className="text-base font-medium">Today, January 2026</span>
               <ChevronDown className="text-muted-foreground size-4" />
             </div>
+            <Download className="inline" />
           </div>
           <div className="overflow-y-auto scrollable-hidden flex flex-col sm:flex-row gap-4 mb-3 md:mb-5">
             <Card className="w-full sm:w-[220px] shrink-0 py-4 gap-4">
