@@ -22,7 +22,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 export default function Page() {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const mainRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {
