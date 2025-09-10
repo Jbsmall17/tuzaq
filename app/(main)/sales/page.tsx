@@ -417,7 +417,7 @@ export default function Page() {
               <span className="text-base font-medium">Today, January 2026</span>
               <ChevronDown className="text-muted-foreground size-4" />
             </div>
-            <Download className="inline" />
+            <Download className="inline block sm:hidden" />
           </div>
           <div className="overflow-y-auto scrollable-hidden flex flex-col sm:flex-row gap-4 mb-3 md:mb-5">
             <Card className="w-full sm:w-[220px] shrink-0 py-4 gap-4">
