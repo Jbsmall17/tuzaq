@@ -361,7 +361,7 @@ export default function Page() {
   const MainContent = () => {
     return (
       <div className="flex-1 main-padding overflow-x-hidden main-height">
-        <h1 className="text-2xl text-primary mb-2 font-semibold">Dashboard</h1>
+        <h1 className="title mb-2">Dashboard</h1>
         <p className="text-base font-medium">Updated last</p>
         <div className="flex flex-col lg:flex-row gap-4 justify-between lg:items-center mb-6 mt-2">
           <div className="flex flex-row gap-4 items-center">

@@ -134,6 +134,9 @@
   .main-height{
     @apply h-[calc(100vh-62px)] sm:h-[calc(100vh-72px)] lg:h-[calc(100vh-82px)] overflow-y-auto;
   }
+  .title{
+    @apply text-xl sm:text-2xl text-primary font-semibold;
+  }
 }
 
 .fade-off{
