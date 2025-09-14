@@ -40,7 +40,7 @@ export default function Page() {
         <>
           <div className="mb-3 md:mb-5 flex flex-col-reverse gap-4 sm:flex-row justify-between sm:items-center">
             <div className="space-y-4">
-              <h1 className="hidden sm:block title mb-4">Sales</h1>
+              <h1 className="title mb-4">Sales</h1>
               <div className="flex flex-row gap-2 items-center">
                 <p>New Consignment</p>
                 <div className="h-0.25 w-[25px] bg-black"></div>
@@ -399,12 +399,19 @@ export default function Page() {
               <Button onClick={()=>setStep(1)} variant={"outline"} className="box-shadow w-[75px]">
                 <ArrowLeft />
               </Button>
-              <p className="title">Sales Summary</p>
+              <p className="title2">Sales Summary</p>
             </div>
             <Button variant={"outline"} className="hidden sm:flex box-shadow">
               <Download className="inline" />
               Download
             </Button>
+            <Image
+              src={"/filter2.svg"}
+              alt="filter"
+              width={24}
+              height={24}
+              className="inline sm:hidden"
+            />
           </div>
           <div  className="flex flex-row justify-between">
             <div className="mb-3 md:mb-5 flex flex-row items-center gap-2"> 
