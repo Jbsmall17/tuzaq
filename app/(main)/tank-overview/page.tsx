@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -69,7 +68,7 @@ export default function Page() {
                             />
                         </div>
                         <CardTitle className="whitespace-nowrap text-sm lg:text-base font-medium">
-                            Today's sales
+                            Today&apos;s sales
                         </CardTitle>
                     </div>
                 </CardHeader>
