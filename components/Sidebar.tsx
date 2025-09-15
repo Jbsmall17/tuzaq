@@ -18,7 +18,7 @@ export default function Sidebar({isSidebarMenuOpen,setIsSidebarMenuOpen}: sideba
     <div onClick={handleClose} className='fixed md:hidden top-0 left-0 z-10  w-[100vw] h-[100vh]'></div>
     <div className='border-r-[1.5px] border-[#d7d7e0] fixed z-20 bg-[#f0f0f0] top-0 left-0 md:static flex flex-col gap-4 h-screen md:h-[calc(100vh-82px)] py-3 md:py-0'>
       <h1 className='block md:hidden text-center text-primary text-xl font-semibold'> Tuzaq</h1>
-    <div className='flex flex-col justify-between flex-1 w-[150px] lg:w-[175px] xl:w-[200px]'>
+    <div className='flex flex-col justify-between flex-1 w-[165px] md:w-[175px] xl:w-[200px]'>
       <ul className='w-full text-[#787878]'>
         <Link href="/dashboard">
         <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/dashboard' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
@@ -38,10 +38,12 @@ export default function Sidebar({isSidebarMenuOpen,setIsSidebarMenuOpen}: sideba
           <span>Offloads</span>
         </li>
         </Link>
-        <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/fuel' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
-          <Fuel className='size-5' />
-          <span>Fuel</span>
-        </li>
+        <Link href={"/tank-overview"}>
+          <li className={`whitespace-nowrap auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/tank-overview' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
+            <Fuel className='size-5 shrink-0' />
+            <span>Tank Overview</span>
+          </li>
+        </Link>
         <li className='auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary'>
           <Files className='size-5' />
           <span>Reports</span>
