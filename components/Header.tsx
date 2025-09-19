@@ -1,4 +1,6 @@
-import { Bell, Menu } from 'lucide-react'
+"use client"
+import { useMyContext } from '@/context'
+import { Bell, EllipsisVertical, Menu } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
@@ -7,8 +9,8 @@ type headerType = {
 }
 
 export default function Header({setIsSidebarMenuOpen}: headerType) {
-  const patchname = usePathname()
-
+  const pathname = usePathname()
+  const {usersStep, setUsersStep} = useMyContext()
   const handleOpen = () => {
     setIsSidebarMenuOpen(true)
   }
@@ -68,12 +70,33 @@ export default function Header({setIsSidebarMenuOpen}: headerType) {
         <div onClick={handleOpen} className='size-7 border-2 border-primary flex-container rounded-full text-primary'>
           <Menu className='cursor-pointer size-5 fill-current' />
         </div>
-        <p className='text-base sm:text-xl font-semibold text-primary'>{getPageTitle(patchname)}</p>
+        <p className='text-base sm:text-xl font-semibold text-primary'>{getPageTitle(pathname)}</p>
       </div>
-      <div className='relative'>
+      {
+        pathname !== "/users"
+        &&
+      <div className={`relative`}>
         <span className='absolute top-0 right-0 size-2 sm:size-3 rounded-full bg-red-800'></span>
         <Bell className='size-6 sm:size-7' />
       </div>
+      }
+      {
+        pathname == "/users"
+        &&
+        usersStep == 0 ?(
+          <div className={`relative`}>
+            <span className='absolute top-0 right-0 size-2 sm:size-3 rounded-full bg-red-800'></span>
+            <Bell className='size-6 sm:size-7' />
+          </div>
+        )
+        : usersStep == 2 ? (
+          <>
+            <EllipsisVertical />
+          </>
+        )
+        : <></>
+      }
+
     </header>
     </>
   )

@@ -50,10 +50,12 @@ export default function Sidebar({isSidebarMenuOpen,setIsSidebarMenuOpen}: sideba
             <span>Reports</span>
           </li>
         </Link>
-        <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/users' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
-          <Users className='size-5' />
-          <span>Users</span>
-        </li>
+        <Link href="/users">
+          <li className={`auth-padding text-sm md:text-base cursor-pointer flex items-center gap-2 py-1.5 md:py-3 ${pathname === '/users' ? 'bg-[#d1ddf3] text-primary font-semibold border-r-2 border-primary' : ''} hover:bg-[#d1ddf3] hover:text-primary hover:font-semibold hover:border-r-2 hover:border-primary`}>
+            <Users className='size-5' />
+            <span>Users</span>
+          </li>
+        </Link>
       </ul>
       <ul className='w-full'>
         <div className='space-y-6 md:space-y-0'>

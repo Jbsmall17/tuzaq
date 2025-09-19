@@ -50,7 +50,7 @@ const tableData = [
   }
 ]
 
-export default function page() {
+export default function Page() {
   return (
     <main className="flex-1 main-padding overflow-x-hidden main-height">
       <div className="space-y-4">
