@@ -10,7 +10,7 @@ type headerType = {
 
 export default function Header({setIsSidebarMenuOpen}: headerType) {
   const pathname = usePathname()
-  const {usersStep, setUsersStep} = useMyContext()
+  const {usersStep} = useMyContext()
   const handleOpen = () => {
     setIsSidebarMenuOpen(true)
   }
